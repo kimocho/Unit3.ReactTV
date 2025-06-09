@@ -4,13 +4,12 @@ import "./shows.css";
 export default function ShowSelection({ shows, setSelectedShow }) {
   return (
     <nav className="shows">
-      {shows.map((currentShow) => {
-        return (
-          <a className="show" key={currentShow.name} onClick={() => { setSelectedShow(currentShow) }}>
-            {currentShow.name}
-          </a>
-        )
-      })}
+      {shows.map((currentShow) => (
+        <a className="show" key={currentShow.name} onClick={() => { setSelectedShow(currentShow) }}>
+          {currentShow.name}
+        </a>
+      )
+      )}
     </nav >
   )
 }
